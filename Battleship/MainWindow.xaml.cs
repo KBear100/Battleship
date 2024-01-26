@@ -33,6 +33,7 @@ namespace Battleship
          * */
         Board gameBoard;
         int gridSquareSize;
+        int numberOfShots = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,32 +43,41 @@ namespace Battleship
         
         public void Fire_Missile_Click(object sender, RoutedEventArgs e)
         {
-            var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
-            Enemy_Canvas.Children.Remove(sele);
-            ///Clean this if statement up and convert to a switch statement
-            //Create a rectangle that is dependant on if a hit or miss is achieved
-            if (gameBoard.PerformTurn() == false)
+            if (numberOfShots != 5)
             {
-                if (gameBoard.playerOne.active == true)
+                MessageBox.Show("Must Select 5 Spaces Before Firing");
+                return;
+            }
+            while(numberOfShots != 0)
+            {
+                var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
+                Enemy_Canvas.Children.Remove(sele);
+                ///Clean this if statement up and convert to a switch statement
+                //Create a rectangle that is dependant on if a hit or miss is achieved
+                if (gameBoard.PerformTurn() == false)
                 {
-                    PlaceHitOrMiss(Enemy_Canvas, false);
-                    Miss_Ratio.Content = "Miss: " + gameBoard.playerOne.playerGrid.misses;
+                    if (gameBoard.playerOne.active == true)
+                    {
+                        PlaceHitOrMiss(Enemy_Canvas, false);
+                        Miss_Ratio.Content = "Miss: " + gameBoard.playerOne.playerGrid.misses;
+                    }
+                    else
+                    {
+                        PlaceHitOrMiss(Player_Canvas, false);
+                        Miss_Ratio.Content = "Miss: " + gameBoard.playerTwo.playerGrid.misses;
+                    }
                 }
                 else
                 {
-                    PlaceHitOrMiss(Player_Canvas, false);
-                    Miss_Ratio.Content = "Miss: " + gameBoard.playerTwo.playerGrid.misses;
+                    Rectangle hit = CreateRectangle(true);
+                    Enemy_Canvas.Children.Add(hit);
+                    PlaceRectangle(hit);
+                    Fire_Missile.IsEnabled = false;
+                    Hit_Ratio.Content = "Hit: " + gameBoard.playerOne.playerGrid.hits;
                 }
+                numberOfShots--;
             }
-            else
-            {
-                Rectangle hit = CreateRectangle(true);
-                Enemy_Canvas.Children.Add(hit);
-                PlaceRectangle(hit);
-                Fire_Missile.IsEnabled = false;
-                Hit_Ratio.Content = "Hit: " + gameBoard.playerOne.playerGrid.hits;
-            }
-           
+            
         }
 
         public void PlaceShips_Click(object sender, RoutedEventArgs e)
@@ -201,6 +211,11 @@ namespace Battleship
 
         private void Enemy_Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            if (numberOfShots == 5)
+            {
+                MessageBox.Show("Already Selected 5 Spaces");
+                return;
+            }
             //Point is a object that holds a x and y value.
             //Point is then set to the current position of the click origin in 
             //the current window.
@@ -212,7 +227,7 @@ namespace Battleship
                 Rectangle selection = new Rectangle();
                 selection.Name = "selection";
                 var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
-                Enemy_Canvas.Children.Remove(sele);
+                //Enemy_Canvas.Children.Remove(sele);
                 selection.Width = 40;
                 selection.Height = 40;
                 selection.Fill = new SolidColorBrush(Colors.Violet);
@@ -220,6 +235,7 @@ namespace Battleship
                 Enemy_Canvas.Children.Add(selection);
                 Canvas.SetTop(selection, (gameBoard.fireLocation.Y * 40));
                 Canvas.SetLeft(selection, (gameBoard.fireLocation.X * 40));
+                numberOfShots++;
             }
         }
 
