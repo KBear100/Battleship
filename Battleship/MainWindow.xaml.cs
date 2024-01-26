@@ -108,8 +108,7 @@ namespace Battleship
             gameBoard.playerTwo.playerGrid.ClearGrid();
             gameBoard.PlaceShips(gameBoard.playerTwo.playerGrid);
             Enemy_Canvas.Children.Clear();
-
-            /*
+            
             for (int x = 0; x < gameBoard.playerTwo.playerGrid.playerShips.Length; x++)
             {
                 DrawShipOnGrid(CreateShip(gameBoard.playerTwo.playerGrid.playerShips[x].GetShipName(),
@@ -117,7 +116,7 @@ namespace Battleship
                                         gameBoard.playerTwo.playerGrid.playerShips[x].GetShipDirection()),
                                         Enemy_Canvas, gameBoard.playerTwo.playerGrid.playerShips[x]);
             }
-            */
+
             Enemy_Battleship.Visibility = Visibility.Hidden;
             Enemy_Carrier.Visibility = Visibility.Hidden;
             Enemy_Destroyer.Visibility = Visibility.Hidden;
@@ -218,6 +217,30 @@ namespace Battleship
                 selection.Fill = new SolidColorBrush(Colors.Violet);
                 selection.Opacity = .7;
                 Enemy_Canvas.Children.Add(selection);
+                Canvas.SetTop(selection, (gameBoard.fireLocation.Y * 40));
+                Canvas.SetLeft(selection, (gameBoard.fireLocation.X * 40));
+            }
+        }
+
+        private void Player_Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //Point is a object that holds a x and y value.
+            //Point is then set to the current position of the click origin in 
+            //the current window.
+            Point point = Mouse.GetPosition(Application.Current.MainWindow);
+            //Apply the algorith covered in grid to the stored points
+            if (gameBoard.SelectSquare(point, gameBoard.playerOne.playerGrid))
+            {
+                Fire_Missile.IsEnabled = true;
+                Rectangle selection = new Rectangle();
+                selection.Name = "selection";
+                var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Player_Canvas, "selection");
+                Player_Canvas.Children.Remove(sele);
+                selection.Width = 40;
+                selection.Height = 40;
+                selection.Fill = new SolidColorBrush(Colors.Violet);
+                selection.Opacity = .7;
+                Player_Canvas.Children.Add(selection);
                 Canvas.SetTop(selection, (gameBoard.fireLocation.Y * 40));
                 Canvas.SetLeft(selection, (gameBoard.fireLocation.X * 40));
             }

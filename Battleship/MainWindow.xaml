@@ -38,7 +38,7 @@
         <TextBox x:Name="Nine_TextBox" HorizontalAlignment="Left" Height="40" Margin="610,0,0,153" TextWrapping="Wrap" Text="9" VerticalAlignment="Bottom" Width="40" IsReadOnly="True" Visibility="Hidden" FontWeight="Bold" FontSize="20" TextAlignment="Center"/>
         <TextBox x:Name="Ten_TextBox" HorizontalAlignment="Left" Height="40" Margin="610,0,0,113" TextWrapping="Wrap" Text="10" VerticalAlignment="Bottom" Width="40" IsReadOnly="True" Visibility="Hidden" FontWeight="Bold" FontSize="20" TextAlignment="Center"/>
         <!--Player Visual Elements-->
-        <Grid x:Name="Player_Grid" Margin="187,156,663,0" ShowGridLines="True" Background="White" Visibility="Hidden" Height="400" VerticalAlignment="Top" Width="400" >
+        <Grid x:Name="Player_Grid" Margin="187,156,663,0" ShowGridLines="True" Background="White" MouseDown="Player_Grid_MouseDown" Visibility="Hidden" Height="400" VerticalAlignment="Top" Width="400" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="20*"/>
                 <RowDefinition Height="20*"/>
@@ -118,7 +118,7 @@
         <Button x:Name="PlaceShips" Content="Place Ships" HorizontalAlignment="Left" Height="54" Margin="189,57,0,0" VerticalAlignment="Top" Width="123" Click="PlaceShips_Click" FontWeight="Bold" FontSize="16" Visibility="Hidden"/>
         <TextBox x:Name="Enemy_Shipyard_Text_Block" HorizontalAlignment="Left" Height="51" Margin="1098,598,0,0" TextWrapping="Wrap" Text="Enemy Shipyard" VerticalAlignment="Top" Width="127" Background="#FFF92C2C" IsReadOnly="True" TextAlignment="Center" FontWeight="Bold" FontSize="18" Visibility="Hidden"/>
         <TextBox x:Name="Player_Shipyard_Text_Block" HorizontalAlignment="Left" Height="25" Margin="14,605,0,0" TextWrapping="Wrap" Text="Your Shipyard" VerticalAlignment="Top" Width="145" Background="#FF2CF9D4" IsReadOnly="True" TextAlignment="Center" FontWeight="Bold" FontSize="18" Visibility="Hidden"/>
-        <Canvas x:Name="Player_Canvas" HorizontalAlignment="Left" Height="400" Margin="187,151,637,0" VerticalAlignment="Top" Width="400" Visibility="Hidden"/>
+        <Canvas x:Name="Player_Canvas" x:FieldModifier="public" HorizontalAlignment="Left" Height="400" Margin="187,151,637,0" VerticalAlignment="Top" Width="400" Visibility="Hidden"/>
         <Button x:Name="Confirm_Ships_Button" Content="Confirm" HorizontalAlignment="Left" Height="54" Margin="336,57,0,0" VerticalAlignment="Top" Width="123" Click="Confirm_Ships_Button_Click" FontWeight="Bold" FontSize="16" Visibility="Hidden"/>
         <Button x:Name="Restart_Game_Button" Content="Restart" HorizontalAlignment="Left" Height="53" Margin="189,57,0,0" VerticalAlignment="Top" Width="123" Background="#FF11D4FF" Click="Start_Game_Button_Click" FontSize="20" FontWeight="Bold" Visibility="Hidden"/>
         <Button x:Name="Exit_Game_Button" Content="Exit Game" HorizontalAlignment="Left" Height="53" Margin="348,58,0,0" VerticalAlignment="Top" Width="123" Background="#FF11D4FF" Click="Exit_Game_Button_Click" FontWeight="Bold" FontSize="20" Visibility="Hidden"/>

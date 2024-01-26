@@ -29,7 +29,7 @@ namespace Battleship
         public Board()
         {
             playerOne = new Player(false, true);
-            playerTwo = new Player(true, false);
+            playerTwo = new Player(false, true);
         }
         
         public bool SelectSquare(System.Windows.Point selectedSquare, Grid grid)
@@ -137,6 +137,7 @@ namespace Battleship
                 if (firingStatus == 2)
                 {
                     didItHit = true;
+                    playerOne.playerGrid.ReportShipDamage(fireLocation);
                 }
                 else
                 {
