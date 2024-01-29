@@ -33,7 +33,6 @@ namespace Battleship
          * */
         Board gameBoard;
         int gridSquareSize;
-        int numberOfShots = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -43,12 +42,12 @@ namespace Battleship
         
         public void Fire_Missile_Click(object sender, RoutedEventArgs e)
         {
-            if (numberOfShots != 5)
+            if (gameBoard.numberOfShots != 5)
             {
                 MessageBox.Show("Must Select 5 Spaces Before Firing");
                 return;
             }
-            while(numberOfShots != 0)
+            while(gameBoard.numberOfShots != 0)
             {
                 var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
                 Enemy_Canvas.Children.Remove(sele);
@@ -75,7 +74,7 @@ namespace Battleship
                     Fire_Missile.IsEnabled = false;
                     Hit_Ratio.Content = "Hit: " + gameBoard.playerOne.playerGrid.hits;
                 }
-                numberOfShots--;
+                gameBoard.numberOfShots--;
             }
             
         }
@@ -211,7 +210,7 @@ namespace Battleship
 
         private void Enemy_Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (numberOfShots == 5)
+            if (gameBoard.numberOfShots == 5)
             {
                 MessageBox.Show("Already Selected 5 Spaces");
                 return;
@@ -226,16 +225,16 @@ namespace Battleship
                 Fire_Missile.IsEnabled = true;
                 Rectangle selection = new Rectangle();
                 selection.Name = "selection";
-                var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
+                //var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection" + numberOfShots);
                 //Enemy_Canvas.Children.Remove(sele);
                 selection.Width = 40;
                 selection.Height = 40;
                 selection.Fill = new SolidColorBrush(Colors.Violet);
                 selection.Opacity = .7;
                 Enemy_Canvas.Children.Add(selection);
-                Canvas.SetTop(selection, (gameBoard.fireLocation.Y * 40));
-                Canvas.SetLeft(selection, (gameBoard.fireLocation.X * 40));
-                numberOfShots++;
+                Canvas.SetTop(selection, (gameBoard.fireLocation[gameBoard.numberOfShots].Y * 40));
+                Canvas.SetLeft(selection, (gameBoard.fireLocation[gameBoard.numberOfShots].X * 40));
+                gameBoard.numberOfShots++;
             }
         }
 
@@ -288,8 +287,8 @@ namespace Battleship
 
         private void PlaceRectangle(Rectangle rect)
         {
-            Canvas.SetTop(rect, (gameBoard.fireLocation.Y * gridSquareSize));
-            Canvas.SetLeft(rect, (gameBoard.fireLocation.X * gridSquareSize));
+            Canvas.SetTop(rect, (gameBoard.fireLocation[gameBoard.numberOfShots].Y * gridSquareSize));
+            Canvas.SetLeft(rect, (gameBoard.fireLocation[gameBoard.numberOfShots].X * gridSquareSize));
         }
         private Ellipse CreateShip(String shipName, int length, bool direction)
         {

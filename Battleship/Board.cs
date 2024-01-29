@@ -10,7 +10,8 @@ namespace Battleship
     {
        public Player playerOne;
        public Player playerTwo;
-       public System.Windows.Point fireLocation;
+       public System.Windows.Point[] fireLocation = new System.Windows.Point[200];
+       public int numberOfShots = 0;
        private enum gridSquareStatus : int
         {
             EMPTYGRIDSQUARE, //0
@@ -35,20 +36,20 @@ namespace Battleship
         public bool SelectSquare(System.Windows.Point selectedSquare, Grid grid)
         {
 
-            fireLocation.X = Math.Floor(Math.Abs(selectedSquare.X - grid.gridWidthStart) / 40);
-            fireLocation.Y = Math.Floor(Math.Abs(selectedSquare.Y - grid.gridHeightStart) / 40);
+            fireLocation[numberOfShots].X = Math.Floor(Math.Abs(selectedSquare.X - grid.gridWidthStart) / 40);
+            fireLocation[numberOfShots].Y = Math.Floor(Math.Abs(selectedSquare.Y - grid.gridHeightStart) / 40);
             //Correcting borders to the max array size
-            if (fireLocation.X > 9)
+            if (fireLocation[numberOfShots].X > 9)
             {
-                fireLocation.X = 9;
+                fireLocation[numberOfShots].X = 9;
             }
-            if (fireLocation.Y > 9)
+            if (fireLocation[numberOfShots].Y > 9)
             {
-                fireLocation.Y = 9;
+                fireLocation[numberOfShots].Y = 9;
             }
 
-            if (grid.gridLocation[Convert.ToInt32(fireLocation.X), Convert.ToInt32(fireLocation.Y)] == 0
-                || grid.gridLocation[Convert.ToInt32(fireLocation.X), Convert.ToInt32(fireLocation.Y)] == 1)
+            if (grid.gridLocation[Convert.ToInt32(fireLocation[numberOfShots].X), Convert.ToInt32(fireLocation[numberOfShots].Y)] == 0
+                || grid.gridLocation[Convert.ToInt32(fireLocation[numberOfShots].X), Convert.ToInt32(fireLocation[numberOfShots].Y)] == 1)
             {
                 return true;
             }
@@ -78,13 +79,13 @@ namespace Battleship
             // 0 = Square is not occupied and should result in a miss (3)
             // 1 = Square has an entity of a ship and should result in a hit (2)
             // Default to miss for any potential errors in math
-            switch (targetGrid.gridLocation[Convert.ToInt32(fireLocation.X), Convert.ToInt32(fireLocation.Y)])
+            switch (targetGrid.gridLocation[Convert.ToInt32(fireLocation[numberOfShots].X), Convert.ToInt32(fireLocation[numberOfShots].Y)])
             {
                 case (0):
-                    targetGrid.gridLocation[Convert.ToInt32(fireLocation.X), Convert.ToInt32(fireLocation.Y)] = 3;
+                    targetGrid.gridLocation[Convert.ToInt32(fireLocation[numberOfShots].X), Convert.ToInt32(fireLocation[numberOfShots].Y)] = 3;
                     return Convert.ToInt32(gridSquareStatus.FIREDANDMISS);
                 case (1):
-                    targetGrid.gridLocation[Convert.ToInt32(fireLocation.X), Convert.ToInt32(fireLocation.Y)] = 2;
+                    targetGrid.gridLocation[Convert.ToInt32(fireLocation[numberOfShots].X), Convert.ToInt32(fireLocation[numberOfShots].Y)] = 2;
                     return Convert.ToInt32(gridSquareStatus.FIREDANDHIT);
                 default:
                     return Convert.ToInt32(gridSquareStatus.FIREDANDMISS);
@@ -124,7 +125,7 @@ namespace Battleship
                 if (firingStatus == 2)
                 {
                     didItHit = true;
-                    playerTwo.playerGrid.ReportShipDamage(fireLocation);
+                    playerTwo.playerGrid.ReportShipDamage(fireLocation[numberOfShots]);
                 }
                 else
                 {
