@@ -113,21 +113,24 @@ namespace Battleship
             int y = 0;
             if (player == 1)
             {
+                gameBoard.playerOne.active = true;
                 foreach (int i in selected)
                 {
                     //converts button index to x,y coordinates for purpose of checking hits
                     x = i % 10;
                     y = i / 10;
 
-                    gameBoard.playerTwo.playerGrid.ReportShipDamage(x, y);
+                    //gameBoard.playerTwo.playerGrid.ReportShipDamage(x, y);
 
                     Hit_Ratio.Content = "Hit: " + gameBoard.playerTwo.playerGrid.hits;
 
                     //disables selected buttons, needs to be updated to mark hit or miss
-                    (Enemy_Grid.Children[i] as Button).Foreground = Brushes.Red;
+                    if(gameBoard.PerformTurn()) (Enemy_Grid.Children[i] as Button).Foreground = Brushes.Red;
+                    else (Enemy_Grid.Children[i] as Button).Foreground = Brushes.Blue;
                     (Enemy_Grid.Children[i] as Button).IsEnabled = false;
                 }
                 //automatically swaps players, needs to be changed to hide all info until next player is ready
+                gameBoard.playerOne.active = false;
                 player = 2;
                 Enemy_Grid.IsEnabled = false;
                 Player_Grid.IsEnabled = true;
@@ -146,22 +149,25 @@ namespace Battleship
             }
             else if (player == 2)
             {
+                gameBoard.playerTwo.active = true;
                 foreach (int i in selected)
                 {
                     //converts button index to x,y coordinates for purpose of checking hits
                     x = i / 10;
                     y = i % 10;
 
-                    gameBoard.playerOne.playerGrid.ReportShipDamage(x, y);
+                    //gameBoard.playerOne.playerGrid.ReportShipDamage(x, y);
 
                     Hit_Ratio_Enemy.Content = "Hit: " + gameBoard.playerOne.playerGrid.hits;
 
                     //disables selected buttons, needs to be updated to mark hit or miss
-                    (Player_Grid.Children[i] as Button).Foreground = Brushes.Red;
+                    if (gameBoard.PerformTurn()) (Player_Grid.Children[i] as Button).Foreground = Brushes.Red;
+                    else (Player_Grid.Children[i] as Button).Foreground = Brushes.Blue;
                     (Player_Grid.Children[i] as Button).IsEnabled = false;
                 }
                 //automatically swaps players, needs to be changed to hide all info until next player is ready
                 player = 1;
+                gameBoard.playerTwo.active = false;
                 Enemy_Grid.IsEnabled = true;
                 Player_Grid.IsEnabled = false;
 
