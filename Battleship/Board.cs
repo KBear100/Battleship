@@ -124,7 +124,7 @@ namespace Battleship
                 if (firingStatus == 2)
                 {
                     didItHit = true;
-                    playerTwo.playerGrid.ReportShipDamage(fireLocation);
+                    playerTwo.playerGrid.ReportShipDamage((int)fireLocation.X, (int)fireLocation.Y);
                 }
                 else
                 {

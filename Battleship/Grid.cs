@@ -160,7 +160,7 @@ namespace Battleship
                 }
             }
         }
-        public void ReportShipDamage(System.Windows.Point firedLocation)
+        public void ReportShipDamage(int HitX, int HitY)
         {
             ///damageFound is being used for breaking out of loops
             ///when the target ship's damage is found
@@ -179,26 +179,36 @@ namespace Battleship
                     //Ship direction returing true = ship horizontal on grid
                     if (playerShips[x].GetShipDirection() == true)
                     {
-                        if (playerShips[x].startPoint.X + y == firedLocation.X)
+                        if (playerShips[x].startPoint.X + y == HitX)
                         {
                             playerShips[x].SetShipHealth(-1);
                             damageFound = true;
                             if (playerShips[x].GetShipHealth() == 0)
                             {
+                                hits++;
                                 System.Windows.MessageBox.Show("Enemy " + playerShips[x].GetShipName() + " Sunk Commander!");
+                            }
+                            else
+                            {
+                                hits++;
                             }
                             break;
                         }
                     }
                     else
                     {
-                        if (playerShips[x].startPoint.Y + y == firedLocation.Y)
+                        if (playerShips[x].startPoint.Y + y == HitY)
                         {
                             playerShips[x].SetShipHealth(-1);
                             damageFound = true;
                             if (playerShips[x].GetShipHealth() == 0)
                             {
+                                hits++;
                                 System.Windows.MessageBox.Show("Enemy " + playerShips[x].GetShipName() + " Sunk Commander!");
+                            }
+                            else
+                            {
+                                hits++;
                             }
                             break;
                         }

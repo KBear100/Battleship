@@ -119,6 +119,10 @@ namespace Battleship
                     x = i / 10;
                     y = i % 10;
 
+                    gameBoard.playerTwo.playerGrid.ReportShipDamage(x, y);
+
+                    Hit_Ratio.Content = "Hit: " + gameBoard.playerTwo.playerGrid.hits;
+
                     //disables selected buttons, needs to be updated to mark hit or miss
                     (Enemy_Grid.Children[i] as Button).Foreground = Brushes.Red;
                     (Enemy_Grid.Children[i] as Button).IsEnabled = false;
@@ -135,6 +139,10 @@ namespace Battleship
                     //converts button index to x,y coordinates for purpose of checking hits
                     x = i / 10;
                     y = i % 10;
+
+                    gameBoard.playerOne.playerGrid.ReportShipDamage(x, y);
+
+                    Hit_Ratio_Enemy.Content = "Hit: " + gameBoard.playerOne.playerGrid.hits;
 
                     //disables selected buttons, needs to be updated to mark hit or miss
                     (Player_Grid.Children[i] as Button).Foreground = Brushes.Red;
@@ -160,7 +168,6 @@ namespace Battleship
         }
 
         //End of Eef Implemented code
-
 
 
 
@@ -242,7 +249,6 @@ namespace Battleship
             gameBoard.PlaceShips(gameBoard.playerTwo.playerGrid);
             Enemy_Canvas.Children.Clear();
 
-            /*
             for (int x = 0; x < gameBoard.playerTwo.playerGrid.playerShips.Length; x++)
             {
                 DrawShipOnGrid(CreateShip(gameBoard.playerTwo.playerGrid.playerShips[x].GetShipName(),
@@ -250,7 +256,7 @@ namespace Battleship
                                         gameBoard.playerTwo.playerGrid.playerShips[x].GetShipDirection()),
                                         Enemy_Canvas, gameBoard.playerTwo.playerGrid.playerShips[x]);
             }
-            */
+
             Enemy_Battleship.Visibility = Visibility.Hidden;
             Enemy_Carrier.Visibility = Visibility.Hidden;
             Enemy_Destroyer.Visibility = Visibility.Hidden;
