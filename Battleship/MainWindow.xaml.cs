@@ -34,8 +34,9 @@ namespace Battleship
         Board gameBoard;
         int gridSquareSize;
         int numberOfShots = 0;
-        //int[] selected = new int[5];
         List<int> selected = new List<int>();
+        int player = 1;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Battleship
             {
                 (sender as Button).Content = "";
                 numberOfShots--;
+
                 selected.Remove(Enemy_Grid.Children.IndexOf((sender as Button)));
                 if (numberOfShots != 5)
                 {
@@ -72,23 +74,90 @@ namespace Battleship
                 {
                     Fire_Missile.IsEnabled = true;
                 }
-                //Enemy_Grid.Children.IndexOf((sender as Button));
+            }
+        }
+        public void P2_Grid_Select_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Content == "X")
+            {
+                (sender as Button).Content = "";
+                numberOfShots--;
+
+                selected.Remove(Player_Grid.Children.IndexOf((sender as Button)));
+                if (numberOfShots != 5)
+                {
+                    Fire_Missile.IsEnabled = false;
+                }
+
+            }
+            else if (numberOfShots == 5)
+            {
+                MessageBox.Show("Already Selected 5 Spaces");
+                return;
+            }
+            else if ((sender as Button).Content == "")
+            {
+                (sender as Button).Content = "X";
+                numberOfShots++;
+                selected.Add(Player_Grid.Children.IndexOf((sender as Button)));
+                if (numberOfShots == 5)
+                {
+                    Fire_Missile.IsEnabled = true;
+                }
             }
         }
 
         public void New_Missle_Click(object sender, RoutedEventArgs e)
         {
-            foreach (int i in selected)
+            int x = 0;
+            int y = 0;
+            if (player == 1)
             {
-                (Enemy_Grid.Children[i] as Button).Foreground = Brushes.Red;
-                (Enemy_Grid.Children[i] as Button).IsEnabled = false;
+                foreach (int i in selected)
+                {
+                    //converts button index to x,y coordinates for purpose of checking hits
+                    x = i / 10;
+                    y = i % 10;
+
+                    //disables selected buttons, needs to be updated to mark hit or miss
+                    (Enemy_Grid.Children[i] as Button).Foreground = Brushes.Red;
+                    (Enemy_Grid.Children[i] as Button).IsEnabled = false;
+                }
+                //automatically swaps players, needs to be changed to hide all info until next player is ready
+                player = 2;
+                Enemy_Grid.IsEnabled = false;
+                Player_Grid.IsEnabled = true;
             }
+            else if (player == 2)
+            {
+                foreach (int i in selected)
+                {
+                    //converts button index to x,y coordinates for purpose of checking hits
+                    x = i / 10;
+                    y = i % 10;
+
+                    //disables selected buttons, needs to be updated to mark hit or miss
+                    (Player_Grid.Children[i] as Button).Foreground = Brushes.Red;
+                    (Player_Grid.Children[i] as Button).IsEnabled = false;
+                }
+                //automatically swaps players, needs to be changed to hide all info until next player is ready
+                player = 1;
+                Enemy_Grid.IsEnabled = true;
+                Player_Grid.IsEnabled = false;
+            }
+            numberOfShots = 0;
             selected.Clear();
             Fire_Missile.IsEnabled = false;
         }
 
-        
+        public void End_Turn_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+        public void Start_Turn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         //End of Eef Implemented code
 
