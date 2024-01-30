@@ -116,8 +116,8 @@ namespace Battleship
                 foreach (int i in selected)
                 {
                     //converts button index to x,y coordinates for purpose of checking hits
-                    x = i / 10;
-                    y = i % 10;
+                    x = i % 10;
+                    y = i / 10;
 
                     gameBoard.playerTwo.playerGrid.ReportShipDamage(x, y);
 
