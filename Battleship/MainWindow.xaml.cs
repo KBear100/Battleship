@@ -131,6 +131,18 @@ namespace Battleship
                 player = 2;
                 Enemy_Grid.IsEnabled = false;
                 Player_Grid.IsEnabled = true;
+
+                foreach(var ship in gameBoard.playerTwo.playerGrid.playerShips)
+                {
+                    Player_Canvas.Children.Clear();
+                }
+                for (int i = 0; i < gameBoard.playerTwo.playerGrid.playerShips.Length; i++)
+                {
+                    DrawShipOnGrid(CreateShip(gameBoard.playerTwo.playerGrid.playerShips[i].GetShipName(),
+                                         gameBoard.playerTwo.playerGrid.playerShips[i].GetShipLength(),
+                                         gameBoard.playerTwo.playerGrid.playerShips[i].GetShipDirection()),
+                                         Enemy_Canvas, gameBoard.playerTwo.playerGrid.playerShips[i]);
+                }
             }
             else if (player == 2)
             {
@@ -152,10 +164,24 @@ namespace Battleship
                 player = 1;
                 Enemy_Grid.IsEnabled = true;
                 Player_Grid.IsEnabled = false;
+
+                foreach (var ship in gameBoard.playerTwo.playerGrid.playerShips)
+                {
+                    Enemy_Canvas.Children.Clear();
+                }
+                for (int i = 0; i < gameBoard.playerOne.playerGrid.playerShips.Length; i++)
+                {
+                    DrawShipOnGrid(CreateShip(gameBoard.playerOne.playerGrid.playerShips[i].GetShipName(),
+                                         gameBoard.playerOne.playerGrid.playerShips[i].GetShipLength(),
+                                         gameBoard.playerOne.playerGrid.playerShips[i].GetShipDirection()),
+                                         Player_Canvas, gameBoard.playerOne.playerGrid.playerShips[i]);
+                }
             }
             numberOfShots = 0;
             selected.Clear();
             Fire_Missile.IsEnabled = false;
+
+            
         }
 
         public void End_Turn_Click(object sender, RoutedEventArgs e)
@@ -249,14 +275,15 @@ namespace Battleship
             gameBoard.PlaceShips(gameBoard.playerTwo.playerGrid);
             Enemy_Canvas.Children.Clear();
 
-            for (int x = 0; x < gameBoard.playerTwo.playerGrid.playerShips.Length; x++)
-            {
-                DrawShipOnGrid(CreateShip(gameBoard.playerTwo.playerGrid.playerShips[x].GetShipName(),
-                                        gameBoard.playerTwo.playerGrid.playerShips[x].GetShipLength(),
-                                        gameBoard.playerTwo.playerGrid.playerShips[x].GetShipDirection()),
-                                        Enemy_Canvas, gameBoard.playerTwo.playerGrid.playerShips[x]);
-            }
-
+            
+            //for (int x = 0; x < gameBoard.playerTwo.playerGrid.playerShips.Length; x++)
+            //{
+            //    DrawShipOnGrid(CreateShip(gameBoard.playerTwo.playerGrid.playerShips[x].GetShipName(),
+            //                            gameBoard.playerTwo.playerGrid.playerShips[x].GetShipLength(),
+            //                            gameBoard.playerTwo.playerGrid.playerShips[x].GetShipDirection()),
+            //                            Enemy_Canvas, gameBoard.playerTwo.playerGrid.playerShips[x]);
+            //}
+            
             Enemy_Battleship.Visibility = Visibility.Hidden;
             Enemy_Carrier.Visibility = Visibility.Hidden;
             Enemy_Destroyer.Visibility = Visibility.Hidden;
