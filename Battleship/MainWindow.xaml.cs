@@ -34,13 +34,67 @@ namespace Battleship
         Board gameBoard;
         int gridSquareSize;
         int numberOfShots = 0;
+        //int[] selected = new int[5];
+        List<int> selected = new List<int>();
         public MainWindow()
         {
             InitializeComponent();
             gameBoard = new Board();
             gridSquareSize = 40;
         }
+
+        //Start of Eef Implemented code
+
+        public void Grid_Select_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Content == "X")
+            {
+                (sender as Button).Content = "";
+                numberOfShots--;
+                selected.Remove(Enemy_Grid.Children.IndexOf((sender as Button)));
+                if (numberOfShots != 5)
+                {
+                    Fire_Missile.IsEnabled = false;
+                }
+
+            }
+            else if (numberOfShots == 5)
+            {
+                MessageBox.Show("Already Selected 5 Spaces");
+                return;
+            }
+            else if ((sender as Button).Content == "")
+            {
+                (sender as Button).Content = "X";
+                numberOfShots++;
+                selected.Add(Enemy_Grid.Children.IndexOf((sender as Button)));
+                if (numberOfShots == 5)
+                {
+                    Fire_Missile.IsEnabled = true;
+                }
+                //Enemy_Grid.Children.IndexOf((sender as Button));
+            }
+        }
+
+        public void New_Missle_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (int i in selected)
+            {
+                (Enemy_Grid.Children[i] as Button).Foreground = Brushes.Red;
+                (Enemy_Grid.Children[i] as Button).IsEnabled = false;
+            }
+            selected.Clear();
+            Fire_Missile.IsEnabled = false;
+        }
+
         
+
+
+        //End of Eef Implemented code
+
+
+
+
         public void Fire_Missile_Click(object sender, RoutedEventArgs e)
         {
             if (numberOfShots != 5)
@@ -48,7 +102,7 @@ namespace Battleship
                 MessageBox.Show("Must Select 5 Spaces Before Firing");
                 return;
             }
-            while(numberOfShots != 0)
+            while (numberOfShots != 0)
             {
                 var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
                 Enemy_Canvas.Children.Remove(sele);
@@ -77,7 +131,7 @@ namespace Battleship
                 }
                 numberOfShots--;
             }
-            
+
         }
 
         public void PlaceShips_Click(object sender, RoutedEventArgs e)
@@ -92,7 +146,7 @@ namespace Battleship
             {
                 DrawShipOnGrid(CreateShip(gameBoard.playerOne.playerGrid.playerShips[x].GetShipName(),
                                      gameBoard.playerOne.playerGrid.playerShips[x].GetShipLength(),
-                                     gameBoard.playerOne.playerGrid.playerShips[x].GetShipDirection()), 
+                                     gameBoard.playerOne.playerGrid.playerShips[x].GetShipDirection()),
                                      Player_Canvas, gameBoard.playerOne.playerGrid.playerShips[x]);
             }
             //Player battleship visibility
@@ -112,7 +166,7 @@ namespace Battleship
         {
             ///Enemy canvas code copied from place ships code
             ///currently not removing old ships from enemy shipyard after placement
-            
+
             //Two for loops to clear out previous ship locations before creating new ships
             //Assumes that ships have been created once before by the user
             gameBoard.playerTwo.playerGrid.ClearGrid();
@@ -209,35 +263,35 @@ namespace Battleship
             Confirm_Ships_Button.IsEnabled = false;
         }
 
-        private void Enemy_Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (numberOfShots == 5)
-            {
-                MessageBox.Show("Already Selected 5 Spaces");
-                return;
-            }
-            //Point is a object that holds a x and y value.
-            //Point is then set to the current position of the click origin in 
-            //the current window.
-            Point point = Mouse.GetPosition(Application.Current.MainWindow);
-            //Apply the algorith covered in grid to the stored points
-            if (gameBoard.SelectSquare(point, gameBoard.playerTwo.playerGrid))
-            {
-                Fire_Missile.IsEnabled = true;
-                Rectangle selection = new Rectangle();
-                selection.Name = "selection";
-                var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
-                //Enemy_Canvas.Children.Remove(sele);
-                selection.Width = 40;
-                selection.Height = 40;
-                selection.Fill = new SolidColorBrush(Colors.Violet);
-                selection.Opacity = .7;
-                Enemy_Canvas.Children.Add(selection);
-                Canvas.SetTop(selection, (gameBoard.fireLocation.Y * 40));
-                Canvas.SetLeft(selection, (gameBoard.fireLocation.X * 40));
-                numberOfShots++;
-            }
-        }
+        //private void Enemy_Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    if (numberOfShots == 5)
+        //    {
+        //        MessageBox.Show("Already Selected 5 Spaces");
+        //        return;
+        //    }
+        //    //Point is a object that holds a x and y value.
+        //    //Point is then set to the current position of the click origin in 
+        //    //the current window.
+        //    Point point = Mouse.GetPosition(Application.Current.MainWindow);
+        //    //Apply the algorith covered in grid to the stored points
+        //    if (gameBoard.SelectSquare(point, gameBoard.playerTwo.playerGrid))
+        //    {
+        //        Fire_Missile.IsEnabled = true;
+        //        Rectangle selection = new Rectangle();
+        //        selection.Name = "selection";
+        //        var sele = (UIElement)LogicalTreeHelper.FindLogicalNode(Enemy_Canvas, "selection");
+        //        //Enemy_Canvas.Children.Remove(sele);
+        //        selection.Width = 40;
+        //        selection.Height = 40;
+        //        selection.Fill = new SolidColorBrush(Colors.Violet);
+        //        selection.Opacity = .7;
+        //        Enemy_Canvas.Children.Add(selection);
+        //        Canvas.SetTop(selection, (gameBoard.fireLocation.Y * 40));
+        //        Canvas.SetLeft(selection, (gameBoard.fireLocation.X * 40));
+        //        numberOfShots++;
+        //    }
+        //}
 
         private void Retreat_Click(object sender, RoutedEventArgs e)
         {
@@ -252,7 +306,7 @@ namespace Battleship
             Exit_Game_Button.Visibility = Visibility.Visible;
 
 
-            if(gameBoard.playerTwo.playerGrid.shipsSunk == gameBoard.playerTwo.playerGrid.playerShips.Length)
+            if (gameBoard.playerTwo.playerGrid.shipsSunk == gameBoard.playerTwo.playerGrid.playerShips.Length)
             {
                 MessageBox.Show("You've defeated the enemy!");
             }

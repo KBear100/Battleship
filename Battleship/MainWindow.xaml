@@ -19,7 +19,7 @@
                 <AccessText TextWrapping="Wrap" Text="PB = Patrol boat  SSBN = Submarine DDG= Destroyer BB= Battleship CVN= Aircraft carrier" Background="#FF62ACF5" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" FontWeight="Bold" Height="64" Visibility="Hidden"/>
             </Label.Content>
         </Label>
-        <Button x:Name="Fire_Missile" Content="Fire Missile" HorizontalAlignment="Left" Height="54" Margin="189,57,0,0" VerticalAlignment="Top" Width="123" IsEnabled="False" Click="Fire_Missile_Click" Visibility="Hidden" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="Fire_Missile" Content="Fire Missiles" HorizontalAlignment="Left" Height="54" Margin="189,57,0,0" VerticalAlignment="Top" Width="123" IsEnabled="False" Click="New_Missle_Click" Visibility="Hidden" FontWeight="Bold" FontSize="18"/>
         <Button x:Name="Retreat" Content="Retreat" HorizontalAlignment="Left" Height="54" Margin="464,57,0,0" VerticalAlignment="Top" Width="123" Click="Retreat_Click" Visibility="Hidden" FontSize="18" FontWeight="Bold" />
         <Label x:Name="Hit_Ratio" Content="Hit: 0" HorizontalAlignment="Left" Height="37" Margin="45,495,0,0" VerticalAlignment="Top" Width="83" Background="#FF62ACF5" FontSize="18" Visibility="Hidden" FontWeight="Bold"/>
         <Label x:Name="Miss_Ratio" Content="Miss: 0" HorizontalAlignment="Left" Height="33" Margin="45,537,0,0" VerticalAlignment="Top" Width="83" Background="#FF62ACF5" Visibility="Hidden" FontWeight="Bold" FontSize="18"/>
@@ -195,7 +195,7 @@
         <TextBox x:Name="Player_I_TextBox" HorizontalAlignment="Left" Height="40" Margin="508,116,0,0" TextWrapping="Wrap" Text="I" VerticalAlignment="Top" Width="40" IsReadOnly="True" Visibility="Hidden" FontWeight="Bold" FontSize="20" TextAlignment="Center"/>
         <TextBox x:Name="Player_J_TextBox" HorizontalAlignment="Left" Height="40" Margin="548,116,0,0" TextWrapping="Wrap" Text="J" VerticalAlignment="Top" Width="40" IsReadOnly="True" Visibility="Hidden" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
         <!--Enemy Visual Elements-->
-        <Grid x:Name="Enemy_Grid" Margin="665,156,187,118" ShowGridLines="True" Background="White" MouseDown="Enemy_Grid_MouseDown" Visibility="Hidden" Height="400" Width="400">
+        <Grid x:Name="Enemy_Grid" Margin="665,156,187,118" ShowGridLines="True" Background="White"  Visibility="Hidden" Height="400" Width="400">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20*"/>
                 <RowDefinition Height="20*"/>
@@ -220,125 +220,126 @@
                 <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
+            
             <!--Button Row 1-->
-            <Button x:Name="p2Button01" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="0"/>
-            <Button x:Name="p2Button02" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="0"/>
-            <Button x:Name="p2Button03" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="0"/>
-            <Button x:Name="p2Button04" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="0"/>
-            <Button x:Name="p2Button05" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="0"/>
-            <Button x:Name="p2Button06" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="0"/>
-            <Button x:Name="p2Button07" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="0"/>
-            <Button x:Name="p2Button08" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="0"/>
-            <Button x:Name="p2Button09" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="0"/>
-            <Button x:Name="p2Button010" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="0"/>
+            <Button x:Name="p2Button01" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button02" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button03" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button04" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button05" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button06" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button07" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button08" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button09" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="0" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button010" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="0" Click="Grid_Select_Click"/>
 
             <!--Button Row 2-->
-            <Button x:Name="p2Button11" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="1"/>
-            <Button x:Name="p2Button12" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="1"/>
-            <Button x:Name="p2Button13" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="1"/>
-            <Button x:Name="p2Button14" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="1"/>
-            <Button x:Name="p2Button15" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="1"/>
-            <Button x:Name="p2Button16" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="1"/>
-            <Button x:Name="p2Button17" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="1"/>
-            <Button x:Name="p2Button18" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="1"/>
-            <Button x:Name="p2Button19" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="1"/>
-            <Button x:Name="p2Button110" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="1"/>
+            <Button x:Name="p2Button11" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button12" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button13" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button14" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button15" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button16" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button17" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button18" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button19" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="1" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button110" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="1" Click="Grid_Select_Click"/>
 
             <!--Button Row 3-->
-            <Button x:Name="p2Button21" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="2"/>
-            <Button x:Name="p2Button22" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="2"/>
-            <Button x:Name="p2Button23" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="2"/>
-            <Button x:Name="p2Button24" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="2"/>
-            <Button x:Name="p2Button25" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="2"/>
-            <Button x:Name="p2Button26" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="2"/>
-            <Button x:Name="p2Button27" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="2"/>
-            <Button x:Name="p2Button28" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="2"/>
-            <Button x:Name="p2Button29" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="2"/>
-            <Button x:Name="p2Button210" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="2"/>
+            <Button x:Name="p2Button21" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button22" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button23" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button24" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button25" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button26" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button27" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button28" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button29" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="2" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button210" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="2" Click="Grid_Select_Click"/>
 
             <!--Button Row 4-->
-            <Button x:Name="p2Button31" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="3"/>
-            <Button x:Name="p2Button32" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="3"/>
-            <Button x:Name="p2Button33" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="3"/>
-            <Button x:Name="p2Button34" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="3"/>
-            <Button x:Name="p2Button35" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="3"/>
-            <Button x:Name="p2Button36" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="3"/>
-            <Button x:Name="p2Button37" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="3"/>
-            <Button x:Name="p2Button38" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="3"/>
-            <Button x:Name="p2Button39" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="3"/>
-            <Button x:Name="p2Button310" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="3"/>
+            <Button x:Name="p2Button31" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button32" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button33" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button34" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button35" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button36" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button37" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button38" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button39" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="3" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button310" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="3" Click="Grid_Select_Click"/>
 
             <!--Button Row 5-->
-            <Button x:Name="p2Button41" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="4"/>
-            <Button x:Name="p2Button42" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="4"/>
-            <Button x:Name="p2Button43" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="4"/>
-            <Button x:Name="p2Button44" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="4"/>
-            <Button x:Name="p2Button45" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="4"/>
-            <Button x:Name="p2Button46" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="4"/>
-            <Button x:Name="p2Button47" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="4"/>
-            <Button x:Name="p2Button48" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="4"/>
-            <Button x:Name="p2Button49" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="4"/>
-            <Button x:Name="p2Button410" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="4"/>
+            <Button x:Name="p2Button41" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button42" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button43" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button44" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button45" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button46" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button47" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button48" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button49" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="4" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button410" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="4" Click="Grid_Select_Click"/>
 
             <!--Button Row 6-->
-            <Button x:Name="p2Button51" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="5"/>
-            <Button x:Name="p2Button52" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="5"/>
-            <Button x:Name="p2Button53" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="5"/>
-            <Button x:Name="p2Button54" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="5"/>
-            <Button x:Name="p2Button55" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="5"/>
-            <Button x:Name="p2Button56" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="5"/>
-            <Button x:Name="p2Button57" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="5"/>
-            <Button x:Name="p2Button58" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="5"/>
-            <Button x:Name="p2Button59" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="5"/>
-            <Button x:Name="p2Button510" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="5"/>
+            <Button x:Name="p2Button51" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button52" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button53" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button54" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button55" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button56" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button57" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button58" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button59" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="5" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button510" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="5" Click="Grid_Select_Click"/>
 
             <!--Button Row 7-->
-            <Button x:Name="p2Button61" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="6"/>
-            <Button x:Name="p2Button62" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="6"/>
-            <Button x:Name="p2Button63" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="6"/>
-            <Button x:Name="p2Button64" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="6"/>
-            <Button x:Name="p2Button65" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="6"/>
-            <Button x:Name="p2Button66" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="6"/>
-            <Button x:Name="p2Button67" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="6"/>
-            <Button x:Name="p2Button68" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="6"/>
-            <Button x:Name="p2Button69" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="6"/>
-            <Button x:Name="p2Button610" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="6"/>
+            <Button x:Name="p2Button61" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button62" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button63" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button64" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button65" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button66" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button67" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button68" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button69" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="6" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button610" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="6" Click="Grid_Select_Click"/>
 
             <!--Button Row 8-->
-            <Button x:Name="p2Button71" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="7"/>
-            <Button x:Name="p2Button72" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="7"/>
-            <Button x:Name="p2Button73" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="7"/>
-            <Button x:Name="p2Button74" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="7"/>
-            <Button x:Name="p2Button75" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="7"/>
-            <Button x:Name="p2Button76" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="7"/>
-            <Button x:Name="p2Button77" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="7"/>
-            <Button x:Name="p2Button78" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="7"/>
-            <Button x:Name="p2Button79" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="7"/>
-            <Button x:Name="p2Button710" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="7"/>
+            <Button x:Name="p2Button71" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button72" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button73" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button74" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button75" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button76" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button77" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button78" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button79" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="7" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button710" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="7" Click="Grid_Select_Click"/>
 
             <!--Button Row 9-->
-            <Button x:Name="p2Button81" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="8"/>
-            <Button x:Name="p2Button82" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="8"/>
-            <Button x:Name="p2Button83" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="8"/>
-            <Button x:Name="p2Button84" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="8"/>
-            <Button x:Name="p2Button85" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="8"/>
-            <Button x:Name="p2Button86" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="8"/>
-            <Button x:Name="p2Button87" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="8"/>
-            <Button x:Name="p2Button88" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="8"/>
-            <Button x:Name="p2Button89" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="8"/>
-            <Button x:Name="p2Button810" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="8"/>
+            <Button x:Name="p2Button81" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button82" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button83" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button84" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button85" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button86" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button87" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button88" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button89" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="8" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button810" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="8" Click="Grid_Select_Click"/>
 
             <!--Button Row 10-->
-            <Button x:Name="p2Button91" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="9"/>
-            <Button x:Name="p2Button92" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="9"/>
-            <Button x:Name="p2Button93" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="9"/>
-            <Button x:Name="p2Button94" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="9"/>
-            <Button x:Name="p2Button95" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="9"/>
-            <Button x:Name="p2Button96" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="9"/>
-            <Button x:Name="p2Button97" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="9"/>
-            <Button x:Name="p2Button98" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="9"/>
-            <Button x:Name="p2Button99" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="9"/>
-            <Button x:Name="p2Button910" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="9"/>
+            <Button x:Name="p2Button91" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button92" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button93" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button94" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button95" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button96" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button97" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button98" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button99" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="9" Click="Grid_Select_Click"/>
+            <Button x:Name="p2Button910" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="9" Click="Grid_Select_Click"/>
 
         </Grid>
         <Canvas x:Name="Enemy_Canvas" Margin="665,156,187,118" x:FieldModifier="public" Visibility="Hidden" Width="400"/>
