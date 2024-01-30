@@ -64,124 +64,124 @@
                 <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
             <!--Button Row 1-->
-            <Button x:Name="Button01" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="0"/>
-            <Button x:Name="Button02" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="0"/>
-            <Button x:Name="Button03" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="0"/>
-            <Button x:Name="Button04" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="0"/>
-            <Button x:Name="Button05" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="0"/>
-            <Button x:Name="Button06" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="0"/>
-            <Button x:Name="Button07" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="0"/>
-            <Button x:Name="Button08" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="0"/>
-            <Button x:Name="Button09" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="0"/>
-            <Button x:Name="Button010" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="0"/>
+            <Button x:Name="Button01" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="0"/>
+            <Button x:Name="Button02" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="0"/>
+            <Button x:Name="Button03" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="0"/>
+            <Button x:Name="Button04" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="0"/>
+            <Button x:Name="Button05" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="0"/>
+            <Button x:Name="Button06" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="0"/>
+            <Button x:Name="Button07" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="0"/>
+            <Button x:Name="Button08" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="0"/>
+            <Button x:Name="Button09" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="0"/>
+            <Button x:Name="Button010" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="0"/>
 
             <!--Button Row 2-->
-            <Button x:Name="Button11" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="1"/>
-            <Button x:Name="Button12" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="1"/>
-            <Button x:Name="Button13" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="1"/>
-            <Button x:Name="Button14" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="1"/>
-            <Button x:Name="Button15" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="1"/>
-            <Button x:Name="Button16" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="1"/>
-            <Button x:Name="Button17" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="1"/>
-            <Button x:Name="Button18" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="1"/>
-            <Button x:Name="Button19" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="1"/>
-            <Button x:Name="Button110" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="1"/>
+            <Button x:Name="Button11" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="1"/>
+            <Button x:Name="Button12" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="Button13" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="1"/>
+            <Button x:Name="Button14" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="1"/>
+            <Button x:Name="Button15" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="1"/>
+            <Button x:Name="Button16" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="1"/>
+            <Button x:Name="Button17" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="1"/>
+            <Button x:Name="Button18" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="1"/>
+            <Button x:Name="Button19" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="1"/>
+            <Button x:Name="Button110" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="1"/>
 
             <!--Button Row 3-->
-            <Button x:Name="Button21" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="2"/>
-            <Button x:Name="Button22" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="2"/>
-            <Button x:Name="Button23" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="2"/>
-            <Button x:Name="Button24" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="2"/>
-            <Button x:Name="Button25" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="2"/>
-            <Button x:Name="Button26" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="2"/>
-            <Button x:Name="Button27" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="2"/>
-            <Button x:Name="Button28" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="2"/>
-            <Button x:Name="Button29" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="2"/>
-            <Button x:Name="Button210" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="2"/>
+            <Button x:Name="Button21" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="2"/>
+            <Button x:Name="Button22" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="Button23" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="2"/>
+            <Button x:Name="Button24" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="2"/>
+            <Button x:Name="Button25" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="2"/>
+            <Button x:Name="Button26" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="2"/>
+            <Button x:Name="Button27" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="2"/>
+            <Button x:Name="Button28" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="2"/>
+            <Button x:Name="Button29" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="2"/>
+            <Button x:Name="Button210" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="2"/>
 
             <!--Button Row 4-->
-            <Button x:Name="Button31" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="3"/>
-            <Button x:Name="Button32" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="3"/>
-            <Button x:Name="Button33" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="3"/>
-            <Button x:Name="Button34" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="3"/>
-            <Button x:Name="Button35" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="3"/>
-            <Button x:Name="Button36" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="3"/>
-            <Button x:Name="Button37" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="3"/>
-            <Button x:Name="Button38" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="3"/>
-            <Button x:Name="Button39" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="3"/>
-            <Button x:Name="Button310" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="3"/>
+            <Button x:Name="Button31" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="3"/>
+            <Button x:Name="Button32" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="3"/>
+            <Button x:Name="Button33" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="3"/>
+            <Button x:Name="Button34" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="3"/>
+            <Button x:Name="Button35" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="3"/>
+            <Button x:Name="Button36" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="3"/>
+            <Button x:Name="Button37" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="3"/>
+            <Button x:Name="Button38" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="3"/>
+            <Button x:Name="Button39" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="3"/>
+            <Button x:Name="Button310" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="3"/>
 
             <!--Button Row 5-->
-            <Button x:Name="Button41" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="4"/>
-            <Button x:Name="Button42" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="4"/>
-            <Button x:Name="Button43" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="4"/>
-            <Button x:Name="Button44" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="4"/>
-            <Button x:Name="Button45" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="4"/>
-            <Button x:Name="Button46" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="4"/>
-            <Button x:Name="Button47" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="4"/>
-            <Button x:Name="Button48" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="4"/>
-            <Button x:Name="Button49" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="4"/>
-            <Button x:Name="Button410" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="4"/>
+            <Button x:Name="Button41" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="4"/>
+            <Button x:Name="Button42" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="4"/>
+            <Button x:Name="Button43" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="4"/>
+            <Button x:Name="Button44" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="4"/>
+            <Button x:Name="Button45" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="4"/>
+            <Button x:Name="Button46" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="4"/>
+            <Button x:Name="Button47" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="4"/>
+            <Button x:Name="Button48" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="4"/>
+            <Button x:Name="Button49" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="4"/>
+            <Button x:Name="Button410" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="4"/>
 
             <!--Button Row 6-->
-            <Button x:Name="Button51" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="5"/>
-            <Button x:Name="Button52" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="5"/>
-            <Button x:Name="Button53" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="5"/>
-            <Button x:Name="Button54" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="5"/>
-            <Button x:Name="Button55" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="5"/>
-            <Button x:Name="Button56" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="5"/>
-            <Button x:Name="Button57" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="5"/>
-            <Button x:Name="Button58" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="5"/>
-            <Button x:Name="Button59" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="5"/>
-            <Button x:Name="Button510" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="5"/>
+            <Button x:Name="Button51" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="5"/>
+            <Button x:Name="Button52" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="5"/>
+            <Button x:Name="Button53" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="5"/>
+            <Button x:Name="Button54" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="5"/>
+            <Button x:Name="Button55" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="5"/>
+            <Button x:Name="Button56" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="5"/>
+            <Button x:Name="Button57" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="5"/>
+            <Button x:Name="Button58" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="5"/>
+            <Button x:Name="Button59" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="5"/>
+            <Button x:Name="Button510" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="5"/>
 
             <!--Button Row 7-->
-            <Button x:Name="Button61" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="6"/>
-            <Button x:Name="Button62" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="6"/>
-            <Button x:Name="Button63" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="6"/>
-            <Button x:Name="Button64" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="6"/>
-            <Button x:Name="Button65" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="6"/>
-            <Button x:Name="Button66" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="6"/>
-            <Button x:Name="Button67" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="6"/>
-            <Button x:Name="Button68" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="6"/>
-            <Button x:Name="Button69" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="6"/>
-            <Button x:Name="Button610" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="6"/>
+            <Button x:Name="Button61" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="6"/>
+            <Button x:Name="Button62" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="6"/>
+            <Button x:Name="Button63" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="6"/>
+            <Button x:Name="Button64" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="6"/>
+            <Button x:Name="Button65" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="6"/>
+            <Button x:Name="Button66" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="6"/>
+            <Button x:Name="Button67" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="6"/>
+            <Button x:Name="Button68" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="6"/>
+            <Button x:Name="Button69" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="6"/>
+            <Button x:Name="Button610" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="6"/>
 
             <!--Button Row 8-->
-            <Button x:Name="Button71" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="7"/>
-            <Button x:Name="Button72" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="7"/>
-            <Button x:Name="Button73" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="7"/>
-            <Button x:Name="Button74" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="7"/>
-            <Button x:Name="Button75" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="7"/>
-            <Button x:Name="Button76" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="7"/>
-            <Button x:Name="Button77" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="7"/>
-            <Button x:Name="Button78" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="7"/>
-            <Button x:Name="Button79" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="7"/>
-            <Button x:Name="Button710" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="7"/>
+            <Button x:Name="Button71" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="7"/>
+            <Button x:Name="Button72" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="7"/>
+            <Button x:Name="Button73" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="7"/>
+            <Button x:Name="Button74" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="7"/>
+            <Button x:Name="Button75" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="7"/>
+            <Button x:Name="Button76" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="7"/>
+            <Button x:Name="Button77" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="7"/>
+            <Button x:Name="Button78" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="7"/>
+            <Button x:Name="Button79" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="7"/>
+            <Button x:Name="Button710" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="7"/>
 
             <!--Button Row 9-->
-            <Button x:Name="Button81" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="8"/>
-            <Button x:Name="Button82" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="8"/>
-            <Button x:Name="Button83" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="8"/>
-            <Button x:Name="Button84" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="8"/>
-            <Button x:Name="Button85" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="8"/>
-            <Button x:Name="Button86" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="8"/>
-            <Button x:Name="Button87" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="8"/>
-            <Button x:Name="Button88" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="8"/>
-            <Button x:Name="Button89" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="8"/>
-            <Button x:Name="Button810" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="8"/>
+            <Button x:Name="Button81" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="8"/>
+            <Button x:Name="Button82" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="8"/>
+            <Button x:Name="Button83" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="8"/>
+            <Button x:Name="Button84" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="8"/>
+            <Button x:Name="Button85" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="8"/>
+            <Button x:Name="Button86" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="8"/>
+            <Button x:Name="Button87" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="8"/>
+            <Button x:Name="Button88" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="8"/>
+            <Button x:Name="Button89" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="8"/>
+            <Button x:Name="Button810" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="8"/>
             
             <!--Button Row 10-->
-            <Button x:Name="Button91" Content="X" Height="40" Width="40" Grid.Column="0" Grid.Row="9"/>
-            <Button x:Name="Button92" Content="X" Height="40" Width="40" Grid.Column="1" Grid.Row="9"/>
-            <Button x:Name="Button93" Content="X" Height="40" Width="40" Grid.Column="2" Grid.Row="9"/>
-            <Button x:Name="Button94" Content="X" Height="40" Width="40" Grid.Column="3" Grid.Row="9"/>
-            <Button x:Name="Button95" Content="X" Height="40" Width="40" Grid.Column="4" Grid.Row="9"/>
-            <Button x:Name="Button96" Content="X" Height="40" Width="40" Grid.Column="5" Grid.Row="9"/>
-            <Button x:Name="Button97" Content="X" Height="40" Width="40" Grid.Column="6" Grid.Row="9"/>
-            <Button x:Name="Button98" Content="X" Height="40" Width="40" Grid.Column="7" Grid.Row="9"/>
-            <Button x:Name="Button99" Content="X" Height="40" Width="40" Grid.Column="8" Grid.Row="9"/>
-            <Button x:Name="Button910" Content="X" Height="40" Width="40" Grid.Column="9" Grid.Row="9"/>
+            <Button x:Name="Button91" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="9"/>
+            <Button x:Name="Button92" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="9"/>
+            <Button x:Name="Button93" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="9"/>
+            <Button x:Name="Button94" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="9"/>
+            <Button x:Name="Button95" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="9"/>
+            <Button x:Name="Button96" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="9"/>
+            <Button x:Name="Button97" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="9"/>
+            <Button x:Name="Button98" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="9"/>
+            <Button x:Name="Button99" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="9"/>
+            <Button x:Name="Button910" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="9"/>
 
         </Grid>
         <TextBox x:Name="Player_A_TextBox" HorizontalAlignment="Left" Height="40" Margin="188,116,0,0" TextWrapping="Wrap" Text="A" VerticalAlignment="Top" Width="40" IsReadOnly="True" Visibility="Hidden" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
@@ -220,6 +220,125 @@
                 <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
+            <!--Button Row 1-->
+            <Button x:Name="p2Button01" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="0"/>
+            <Button x:Name="p2Button02" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="0"/>
+            <Button x:Name="p2Button03" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="0"/>
+            <Button x:Name="p2Button04" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="0"/>
+            <Button x:Name="p2Button05" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="0"/>
+            <Button x:Name="p2Button06" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="0"/>
+            <Button x:Name="p2Button07" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="0"/>
+            <Button x:Name="p2Button08" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="0"/>
+            <Button x:Name="p2Button09" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="0"/>
+            <Button x:Name="p2Button010" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="0"/>
+
+            <!--Button Row 2-->
+            <Button x:Name="p2Button11" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="1"/>
+            <Button x:Name="p2Button12" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="p2Button13" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="1"/>
+            <Button x:Name="p2Button14" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="1"/>
+            <Button x:Name="p2Button15" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="1"/>
+            <Button x:Name="p2Button16" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="1"/>
+            <Button x:Name="p2Button17" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="1"/>
+            <Button x:Name="p2Button18" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="1"/>
+            <Button x:Name="p2Button19" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="1"/>
+            <Button x:Name="p2Button110" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="1"/>
+
+            <!--Button Row 3-->
+            <Button x:Name="p2Button21" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="2"/>
+            <Button x:Name="p2Button22" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="p2Button23" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="2"/>
+            <Button x:Name="p2Button24" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="2"/>
+            <Button x:Name="p2Button25" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="2"/>
+            <Button x:Name="p2Button26" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="2"/>
+            <Button x:Name="p2Button27" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="2"/>
+            <Button x:Name="p2Button28" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="2"/>
+            <Button x:Name="p2Button29" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="2"/>
+            <Button x:Name="p2Button210" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="2"/>
+
+            <!--Button Row 4-->
+            <Button x:Name="p2Button31" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="3"/>
+            <Button x:Name="p2Button32" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="3"/>
+            <Button x:Name="p2Button33" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="3"/>
+            <Button x:Name="p2Button34" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="3"/>
+            <Button x:Name="p2Button35" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="3"/>
+            <Button x:Name="p2Button36" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="3"/>
+            <Button x:Name="p2Button37" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="3"/>
+            <Button x:Name="p2Button38" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="3"/>
+            <Button x:Name="p2Button39" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="3"/>
+            <Button x:Name="p2Button310" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="3"/>
+
+            <!--Button Row 5-->
+            <Button x:Name="p2Button41" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="4"/>
+            <Button x:Name="p2Button42" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="4"/>
+            <Button x:Name="p2Button43" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="4"/>
+            <Button x:Name="p2Button44" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="4"/>
+            <Button x:Name="p2Button45" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="4"/>
+            <Button x:Name="p2Button46" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="4"/>
+            <Button x:Name="p2Button47" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="4"/>
+            <Button x:Name="p2Button48" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="4"/>
+            <Button x:Name="p2Button49" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="4"/>
+            <Button x:Name="p2Button410" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="4"/>
+
+            <!--Button Row 6-->
+            <Button x:Name="p2Button51" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="5"/>
+            <Button x:Name="p2Button52" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="5"/>
+            <Button x:Name="p2Button53" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="5"/>
+            <Button x:Name="p2Button54" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="5"/>
+            <Button x:Name="p2Button55" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="5"/>
+            <Button x:Name="p2Button56" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="5"/>
+            <Button x:Name="p2Button57" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="5"/>
+            <Button x:Name="p2Button58" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="5"/>
+            <Button x:Name="p2Button59" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="5"/>
+            <Button x:Name="p2Button510" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="5"/>
+
+            <!--Button Row 7-->
+            <Button x:Name="p2Button61" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="6"/>
+            <Button x:Name="p2Button62" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="6"/>
+            <Button x:Name="p2Button63" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="6"/>
+            <Button x:Name="p2Button64" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="6"/>
+            <Button x:Name="p2Button65" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="6"/>
+            <Button x:Name="p2Button66" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="6"/>
+            <Button x:Name="p2Button67" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="6"/>
+            <Button x:Name="p2Button68" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="6"/>
+            <Button x:Name="p2Button69" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="6"/>
+            <Button x:Name="p2Button610" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="6"/>
+
+            <!--Button Row 8-->
+            <Button x:Name="p2Button71" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="7"/>
+            <Button x:Name="p2Button72" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="7"/>
+            <Button x:Name="p2Button73" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="7"/>
+            <Button x:Name="p2Button74" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="7"/>
+            <Button x:Name="p2Button75" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="7"/>
+            <Button x:Name="p2Button76" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="7"/>
+            <Button x:Name="p2Button77" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="7"/>
+            <Button x:Name="p2Button78" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="7"/>
+            <Button x:Name="p2Button79" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="7"/>
+            <Button x:Name="p2Button710" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="7"/>
+
+            <!--Button Row 9-->
+            <Button x:Name="p2Button81" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="8"/>
+            <Button x:Name="p2Button82" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="8"/>
+            <Button x:Name="p2Button83" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="8"/>
+            <Button x:Name="p2Button84" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="8"/>
+            <Button x:Name="p2Button85" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="8"/>
+            <Button x:Name="p2Button86" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="8"/>
+            <Button x:Name="p2Button87" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="8"/>
+            <Button x:Name="p2Button88" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="8"/>
+            <Button x:Name="p2Button89" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="8"/>
+            <Button x:Name="p2Button810" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="8"/>
+
+            <!--Button Row 10-->
+            <Button x:Name="p2Button91" Content="" Height="40" Width="40" Grid.Column="0" Grid.Row="9"/>
+            <Button x:Name="p2Button92" Content="" Height="40" Width="40" Grid.Column="1" Grid.Row="9"/>
+            <Button x:Name="p2Button93" Content="" Height="40" Width="40" Grid.Column="2" Grid.Row="9"/>
+            <Button x:Name="p2Button94" Content="" Height="40" Width="40" Grid.Column="3" Grid.Row="9"/>
+            <Button x:Name="p2Button95" Content="" Height="40" Width="40" Grid.Column="4" Grid.Row="9"/>
+            <Button x:Name="p2Button96" Content="" Height="40" Width="40" Grid.Column="5" Grid.Row="9"/>
+            <Button x:Name="p2Button97" Content="" Height="40" Width="40" Grid.Column="6" Grid.Row="9"/>
+            <Button x:Name="p2Button98" Content="" Height="40" Width="40" Grid.Column="7" Grid.Row="9"/>
+            <Button x:Name="p2Button99" Content="" Height="40" Width="40" Grid.Column="8" Grid.Row="9"/>
+            <Button x:Name="p2Button910" Content="" Height="40" Width="40" Grid.Column="9" Grid.Row="9"/>
 
         </Grid>
         <Canvas x:Name="Enemy_Canvas" Margin="665,156,187,118" x:FieldModifier="public" Visibility="Hidden" Width="400"/>
