@@ -8,10 +8,12 @@ namespace Battleship
 {
     class Board
     {
-       public Player playerOne;
-       public Player playerTwo;
-       public System.Windows.Point fireLocation;
-       private enum gridSquareStatus : int
+        public Player playerOne;
+        public Player playerTwo;
+        public System.Windows.Point fireLocation;
+        public int X = 0;
+        public int Y = 0;
+        private enum gridSquareStatus : int
         {
             EMPTYGRIDSQUARE, //0
             OCCUPGRIDSQUARE, //1
@@ -31,7 +33,7 @@ namespace Battleship
             playerOne = new Player(false, true);
             playerTwo = new Player(true, false);
         }
-        
+
         public bool SelectSquare(System.Windows.Point selectedSquare, Grid grid)
         {
 
@@ -56,17 +58,17 @@ namespace Battleship
             {
                 return false;
             }
-           
+
         }
 
         public void PlaceShips(Grid grid)
         {
-            grid.playerShips[0] = new Ship(0, 0, 2,"Patrol");
+            grid.playerShips[0] = new Ship(0, 0, 2, "Patrol");
             grid.playerShips[1] = new Ship(0, 0, 3, "Submarine");
             grid.playerShips[2] = new Ship(0, 0, 3, "Cruiser");
             grid.playerShips[3] = new Ship(0, 0, 4, "Battleship");
             grid.playerShips[4] = new Ship(0, 0, 5, "Carrier");
-            for(int x = 0; x < grid.playerShips.Length; x++)
+            for (int x = 0; x < grid.playerShips.Length; x++)
             {
                 grid.PlaceShips(grid, grid.playerShips[x]);
             }
@@ -113,31 +115,50 @@ namespace Battleship
         public bool PerformTurn()
         {
             //If firing status = 2, a hit was achieved
-            
+
             ///CHANGE THE TWO FOR LOOPS INTO AN ALGORITHM THAT CAN 
             ///SEARCH THE ARRAYS MORE EFFICENTLY 
             bool didItHit = false;
             if (playerOne.active == true)
             {
-                int firingStatus = FireShot(playerTwo.playerGrid);
+                //int firingStatus = FireShot(playerTwo.playerGrid);
 
-                if (firingStatus == 2)
+                //if (firingStatus == 2)
+                //{
+                //    didItHit = true;
+                //    playerTwo.playerGrid.ReportShipDamage((int)fireLocation.X, (int)fireLocation.Y);
+                //}
+                //else
+                //{
+                //    didItHit = false;
+                //}
+
+                if (playerTwo.playerGrid.ReportShipDamage(X, Y))
                 {
                     didItHit = true;
-                    playerTwo.playerGrid.ReportShipDamage((int)fireLocation.X, (int)fireLocation.Y);
                 }
                 else
                 {
                     didItHit = false;
                 }
+
             }
             else
             {
-                int firingStatus = FireShot(playerOne.playerGrid);
-                if (firingStatus == 2)
+                //int firingStatus = FireShot(playerOne.playerGrid);
+                //if (firingStatus == 2)
+                //{
+                //    didItHit = true;
+                //    playerOne.playerGrid.ReportShipDamage((int)fireLocation.X, (int)fireLocation.Y);
+                //}
+                //else
+                //{
+                //    didItHit = false;
+                //}
+
+                if (playerTwo.playerGrid.ReportShipDamage(X, Y))
                 {
                     didItHit = true;
-                    playerOne.playerGrid.ReportShipDamage((int)fireLocation.X, (int)fireLocation.Y);
                 }
                 else
                 {

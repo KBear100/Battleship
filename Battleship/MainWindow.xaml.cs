@@ -120,6 +120,9 @@ namespace Battleship
                     x = i % 10;
                     y = i / 10;
 
+                    gameBoard.X = x; 
+                    gameBoard.Y = y;
+
                     //gameBoard.playerTwo.playerGrid.ReportShipDamage(x, y);
 
                     Hit_Ratio.Content = "Hit: " + gameBoard.playerTwo.playerGrid.hits;
@@ -153,8 +156,11 @@ namespace Battleship
                 foreach (int i in selected)
                 {
                     //converts button index to x,y coordinates for purpose of checking hits
-                    x = i / 10;
-                    y = i % 10;
+                    x = i % 10;
+                    y = i / 10;
+
+                    gameBoard.X = x;
+                    gameBoard.Y = y;
 
                     //gameBoard.playerOne.playerGrid.ReportShipDamage(x, y);
 
@@ -171,7 +177,7 @@ namespace Battleship
                 Enemy_Grid.IsEnabled = true;
                 Player_Grid.IsEnabled = false;
 
-                foreach (var ship in gameBoard.playerTwo.playerGrid.playerShips)
+                foreach (var ship in gameBoard.playerOne.playerGrid.playerShips)
                 {
                     Enemy_Canvas.Children.Clear();
                 }

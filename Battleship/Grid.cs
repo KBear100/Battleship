@@ -22,11 +22,11 @@ namespace Battleship
             shipsSunk = 0;
             gridWidthStart = 665;
             gridHeightStart = 156;
-            gridLocation = new int [10,10];
+            gridLocation = new int[10, 10];
             hits = 0;
             misses = 0;
             ClearGrid();
-    }
+        }
         /* Equation to determine individual squares
            // Math.Floor((665 - 156) / 20);
             //Take the start point of the grid(left/top (the x/y) ) and 
@@ -49,7 +49,7 @@ namespace Battleship
         public void PlaceShips(Grid grid, Ship ship)
         {
             //Ship direction returing as true = ship is oriented as horizontal||false = vertical
-            if(ship.GetShipDirection() == true)
+            if (ship.GetShipDirection() == true)
             {
                 HorizontalPlacement(grid, ship);
             }
@@ -156,11 +156,11 @@ namespace Battleship
             {
                 for (int y = 0; y < 10; y++)
                 {
-                    gridLocation[x,y] = 0;
+                    gridLocation[x, y] = 0;
                 }
             }
         }
-        public void ReportShipDamage(int HitX, int HitY)
+        public bool ReportShipDamage(int HitX, int HitY)
         {
             ///damageFound is being used for breaking out of loops
             ///when the target ship's damage is found
@@ -170,7 +170,8 @@ namespace Battleship
                 //break the loop if damage is found
                 if (damageFound == true)
                 {
-                    break;
+                    return damageFound;
+                    //break;
                 }
                 //To prevent checking the ship's length from the method every itoration
                 int currentShipLength = playerShips[x].GetShipLength();
@@ -179,7 +180,7 @@ namespace Battleship
                     //Ship direction returing true = ship horizontal on grid
                     if (playerShips[x].GetShipDirection() == true)
                     {
-                        if (playerShips[x].startPoint.X + y == HitX)
+                        if (playerShips[x].startPoint.X + y == HitX && playerShips[x].startPoint.Y == HitY)
                         {
                             playerShips[x].SetShipHealth(-1);
                             damageFound = true;
@@ -197,7 +198,7 @@ namespace Battleship
                     }
                     else
                     {
-                        if (playerShips[x].startPoint.Y + y == HitY)
+                        if (playerShips[x].startPoint.Y + y == HitY && playerShips[x].startPoint.X == HitX)
                         {
                             playerShips[x].SetShipHealth(-1);
                             damageFound = true;
@@ -215,6 +216,7 @@ namespace Battleship
                     }
                 }
             }
+            return damageFound;
         }
     }
 }
