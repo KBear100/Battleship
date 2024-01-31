@@ -142,6 +142,7 @@ namespace Battleship
                 {
                     Player_Canvas.Children.Clear();
                 }
+                MessageBox.Show("Give the computer to Player 2");
                 for (int i = 0; i < gameBoard.playerTwo.playerGrid.playerShips.Length; i++)
                 {
                     DrawShipOnGrid(CreateShip(gameBoard.playerTwo.playerGrid.playerShips[i].GetShipName(),
@@ -181,6 +182,7 @@ namespace Battleship
                 {
                     Enemy_Canvas.Children.Clear();
                 }
+                MessageBox.Show("Give the computer to Player 1");
                 for (int i = 0; i < gameBoard.playerOne.playerGrid.playerShips.Length; i++)
                 {
                     DrawShipOnGrid(CreateShip(gameBoard.playerOne.playerGrid.playerShips[i].GetShipName(),
